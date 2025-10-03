@@ -6,7 +6,11 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: '',
+			logo: {
+				light: './src/assets/logo-light.svg',
+				dark: './src/assets/logo-dark.svg',
+			},
 			defaultLocale: 'root',
 			locales: {
 				root: {
@@ -17,16 +21,29 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Bienvenidos',
+					autogenerate: { directory: 'bienvenidos' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Información institucional',
+					autogenerate: { directory: 'informacion-institucional' },
 				},
+				{
+					label: 'Información Organizativa',
+					autogenerate: { directory: 'informacion-organizativa' },
+				},
+				{
+					label: 'Administradores y directivos',
+					autogenerate: { directory: 'informacion-administradores-y-directivos' },
+				},
+				{
+					label: 'Servicios y procedimientos',
+					autogenerate: { directory: 'informacion-de-servicios-y-procedimientos' },
+				},
+				{
+					label: 'Información económica y financiera',
+					autogenerate: { directory: 'informacion-economica-y-financiera' },
+				}
 			],
 		}),
 	],
