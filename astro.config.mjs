@@ -43,6 +43,14 @@ export default defineConfig({
 				{
 					label: 'Información económica y financiera',
 					autogenerate: { directory: 'informacion-economica-y-financiera' },
+				},
+				{
+					label: 'Información de contratos',
+					autogenerate: { directory: 'informacion-de-contratos'},
+				},
+				{
+					label: 'Información de ayudas y subvenciones',
+					autogenerate: { directory: 'informacion-de-ayudas-y-subvenciones' },
 				}
 			],
 		}),
