@@ -143,7 +143,7 @@ export default defineConfig({
       },
     ],
     customCss: [
-      './src/styles/custom.css',
+      './public/styles/custom.css',
     ],
   })],
 });
