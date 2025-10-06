@@ -1,12 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightThemeRapide from 'starlight-theme-rapide'
 
 const googleAnalyticsId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID || 'G-7FBCL4YV9X';
 
 export default defineConfig({
   site: 'https://transparencia.asinfinity.org',
   integrations: [starlight({
+    plugins: [starlightThemeRapide()],
     title: '',
     logo: {
       light: './src/assets/logo-light.svg',
@@ -20,6 +22,9 @@ export default defineConfig({
       },
     },
     social: [
+      { icon: 'instagram', label: 'Instagram', href:'https://www.instagram.com/asociacion.infinity/'},
+      { icon: 'facebook', label: 'Facebook', href:'https://www.facebook.com/ASOInfinity/'},
+      { icon: 'linkedin', label: 'LinkedIn', href:'https://es.linkedin.com/company/asociaci%C3%B3n-solidaria-infinity'},
       { icon: 'github', label: 'GitHub', href: 'https://github.com/InfinitySourceCode/transparencia' },
     ],
     sidebar: [
@@ -118,7 +123,8 @@ export default defineConfig({
         items: [
           {
             label: 'Ayudas y subvenciones',
-            link: '/informacion-de-ayudas-y-subvenciones/ayudas-y-subvenciones'
+            link: '/informacion-de-ayudas-y-subvenciones/ayudas-y-subvenciones',
+            badge: 'WIP',
           },
         ]
       },
