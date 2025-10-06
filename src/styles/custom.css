@@ -1,0 +1,48 @@
+.economic-table table {
+    margin-top: 2rem!important;
+}
+
+
+.economic-table td:nth-child(2) {
+    text-align: right; /* Alinea la segunda columna (Resultado del Ejercicio) a la derecha */
+}
+
+
+.contract-table tr[data-num-contratos="0"] {
+    background-color: #d3d3d3; /* Fondo gris claro */
+  }
+  
+  .contract-table td:nth-child(2) {
+    text-align: right; /* Alinea el contenido de la segunda columna a la derecha */
+  }
+  
+  .contract-table th {
+    text-align: center; /* Centra los encabezados */
+  }
+  
+  .contract-table td {
+    padding: 8px; /* Añade padding para mejor legibilidad */
+  }
+
+/* Fondo gris para tablas con 0 contratos (aplicado manualmente a pestañas conocidas) */
+div.no-header-table starlight-tabs  table  th {
+    display: none;
+  }
+
+/* Estilos para las tablas dentro de los Tabs de Starlight */
+starlight-tabs table {
+  width: 100%; /* Ocupa el 100% del espacio disponible */
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: inline-table;
+}
+
+starlight-tabs table td {
+  padding: 0.75rem; /* Aumenta el padding para mejor espaciado */
+}
+
+
+/* Alinear el texto de la segunda columna a la derecha */
+starlight-tabs table td:nth-child(2) {
+  text-align: right;
+}
