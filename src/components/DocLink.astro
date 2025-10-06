@@ -1,0 +1,66 @@
+---
+import { documentsInfo } from '../data/documents.ts';
+
+interface Document {
+  type: string;
+  number: string;
+  description: string;
+  link_text: string;
+  link: string | null;
+}
+
+interface Documents {
+  [key: string]: Document;
+}
+
+interface DocumentsInfo {
+  documents: Documents;
+  last_update: string;
+}
+
+interface Props {
+  ref: string | number;
+  class?: string;
+  text?: "link_text" | "description" | string; // nuevo prop flexible
+}
+
+const { ref, class: className = "", text } = Astro.props;
+
+// convertir a string para indexar en el objeto
+const key = String(ref);
+const doc: Document | undefined = (documentsInfo as DocumentsInfo).documents[key];
+
+if (!doc) {
+  throw new Error(`DocLink: no se encontró documento con ref "${key}"`);
+}
+
+// lógica para determinar qué texto mostrar
+let displayText: string;
+if (!text) {
+  displayText = doc.link_text || "Descarga en pdf";
+} else if (text === "link_text") {
+  displayText = doc.link_text || "Descarga en pdf";
+} else if (text === "description") {
+  displayText = doc.description;
+} else {
+  displayText = text; // texto personalizado pasado como prop
+}
+---
+
+{doc.link 
+  ? <a 
+      href={doc.link} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class={`no-underline ${className}`}
+    >
+      {displayText}
+    </a>
+  : <span>{displayText}</span>
+}
+
+<style>
+  a.no-underline {
+    text-decoration: none;
+  }
+</style>

@@ -1,0 +1,274 @@
+'1':
+  description: Normativa aplicable a la entidad
+  link_id: 1wftJ5n591LZf5xGbTRo0j2WMNyX6Oppl
+  link_text: Descarga en formato odt
+  number: '1'
+  type: Información Organizativa
+'2':
+  description: Política de Transparencia
+  link_id: 1D5evO5YJZ_hlHWc1w95_g0eiA03Nnn7C
+  link_text: Descarga en formato odt
+  number: '1'
+  type: Información Organizativa
+'3':
+  description: Política de Accesibilidad
+  link_id: 1IaW1620L5klGYmOYx9HMTTqHX1PLXFbC
+  link_text: Descarga en formato txt
+  number: '1'
+  type: Información Organizativa
+'4':
+  description: Política Anticorrupción
+  link_id: 1m1FtjqWN84IvzApgVZ3iYSMteqoIKfv6
+  link_text: Descarga en formato odt
+  number: '1'
+  type: Información Organizativa
+'5':
+  description: Funciones y competencias
+  link_id: 1QftcTwJ7_1Yls96ExtsX5YznvV7zj4rW
+  link_text: Descarga en formato odt
+  number: '1'
+  type: Información Organizativa
+'6':
+  description: Código de ética y conducta
+  link_id: 1sxlIQICg_tf2PAXaCRGnDIwUXTNbFngl
+  link_text: Descarga en formato odt
+  number: '1'
+  type: Información Organizativa
+'7':
+  description: Estatutos
+  link_id: 1lFE_gc8eL28bx8kdHOIsMyu2c0tRN6wD
+  link_text: Descarga en formato odt
+  number: '2'
+  type: Información Organizativa
+'8':
+  description: Organigrama Técnico
+  link_id: 1bb7686C6K8DEK7TqjL-OxWGfMQnJqeq1
+  link_text: Descarga en formato odt
+  number: '3'
+  type: Información Organizativa
+'9':
+  description: Información sobre cargos directivos
+  link_id: 1srXlBYDptxzNU04zhvciI-D53Vlu200s
+  link_text: Descarga en formato odt
+  number: '4'
+  type: Administradores y directivos
+'10':
+  description: Retribuciones a cargos directivos
+  link_id: null
+  link_text: No aplica. Los miembros de la Junta Directiva y la Directora no perciben ninguna remuneración por su cargo.
+  number: '5'
+  type: Administradores y directivos
+'11':
+  description: Canal de Denuncia
+  link_id: 1SsAI9UsqdUJ0sYlzRvZJ8RfI8iANSHF7
+  link_text: Descarga en formato odt
+  number: '6'
+  type: Servicios y procedimientos
+'12':
+  description: Polítca Anticorrupción
+  link_id: 1m1FtjqWN84IvzApgVZ3iYSMteqoIKfv6
+  link_text: Descarga en formato odt
+  number: '6'
+  type: Servicios y procedimientos
+'13':
+  description: Balance 2022
+  link_id: 1pF-SN1iokWTxcCUEO6d_PngXtopIjeHS
+  link_text: Descarga en formato ods
+  number: '7'
+  type: Información económica y financiera
+'14':
+  description: P&G 2022
+  link_id: 1t0qVL08-ESv-1umfW9jIucOs8qIMaFcu
+  link_text: Descarga en formato ods
+  number: '7'
+  type: Información económica y financiera
+'15':
+  description: Memoria económica de 2022
+  link_id: null
+  link_text: No Aplica por volumen de ingresos inferiora 20.000 €
+  number: '7'
+  type: Información económica y financiera
+'16':
+  description: Informe de Auditoría de Cuentas año 2022
+  link_id: null
+  link_text: No aplica. La entidad no está obligada apresentar cuentas anuales dado que no cuenta con la calificaciónde utilidad pública, y cumple conlos límites establecidos
+    para la exención de auditoría según el PGC PYME.
+  number: '7'
+  type: Información económica y financiera
+'17':
+  description: Balance 2023
+  link_id: 16gxb6qiCmbZBXRpI5Q76V5UE0_8aGb-6
+  link_text: Descarga en formato ods
+  number: '7'
+  type: Información económica y financiera
+'18':
+  description: P&G 2023
+  link_id: 1ckvEQ7Jr4fapULPM2TNgosdIoJmyPKO9
+  link_text: Descarga en formato ods
+  number: '7'
+  type: Información económica y financiera
+'19':
+  description: Memoria económica de 2023
+  link_id: 1nZdX8d0lbJI-4qyIkkc6P8LMCczPsY_k
+  link_text: Descarga en formato odt
+  number: '7'
+  type: Información económica y financiera
+'20':
+  description: Informe de Auditoría de Cuentas año 2023
+  link_id: null
+  link_text: No aplica.La entidad no está obligada apresentar cuentas anuales dadoque
+    no cuenta con la calificaciónde utilidad pública, y cumple conlos límites establecidos
+    para laexención de auditoría según elPGC PYME.
+  number: '7'
+  type: Información económica y financiera
+'21':
+  description: 'Informe de Auditoría Unidos por el Ritmo: Las Palmas cultural'
+  link_id: 1wqZ1i46tcarJ3SS-1kBr_NO_E3J8x1aO
+  link_text: Descarga en formato pdf
+  number: '8'
+  type: Información económica y financiera
+'22':
+  description: Informe de Auditoría Las Palmas deportiva
+  link_id: 1H5VlH1Cwrhy9MX0P97HrT4Erwc4WhM2z
+  link_text: Descarga en formato pdf
+  number: '8'
+  type: Información económica y financiera
+'23':
+  description: Información de contratos
+  link_id: null
+  link_text: No aplica por no existir contratos
+  number: '9'
+  type: Información de Contratos
+'24':
+  description: Datos estádisticos sobre contratos
+  link_id: null
+  link_text: No aplica por no existir contratos
+  number: '10'
+  type: Información de Contratos
+'25':
+  description: Modificaciones de los contratos formalizados
+  link_id: null
+  link_text: No aplica por no existir contratos
+  number: '11'
+  type: Información de Contratos
+'26':
+  description: Información trimesral de Contratos Menores
+  link_id: 1_x5zLGDwx7BRWVL6VQ0JA9LQfFN8drTI
+  link_text: Descarga en formato ods
+  number: '13'
+  type: Información de Contratos
+'27':
+  description: Convenios
+  link_id: null
+  link_text: No aplica por no existir convenios
+  number: '14'
+  type: Información de Contratos
+'28':
+  description: Modificaciones de Convenios
+  link_id: null
+  link_text: No aplica por no existir convenios
+  number: '15'
+  type: Información de Contratos
+'29':
+  description: Resumen de Subvenciones 2023
+  link_id: 1uP1tiMspPWxuSM3jH6NP4BjtB0iWqQf5
+  link_text: Descarga en formato ods
+  number: '16'
+  type: Información de Ayudas y subvenciones
+'30':
+  description: Código de Identificación Fiscal
+  link_id: 1It0ePKXtKQSziXvwn9JVBGuwHxOvxIQb
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Información Institucional
+'31':
+  description: Registro de Asociaciones de Canarias
+  link_id: 1Pki_s85LKYuaFv4FoFcBXJSw51bufn45
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Información Institucional
+'32':
+  description: Registro de Entidades Ciudadanas de Las Palmas de GranCanaria
+  link_id: 1XA5LRFA5P0spFIDVVpxJUSzYs2wV3c4_
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Información Institucional
+'33':
+  description: Registro de Entidades Colaboradoras en la Prestación deServicios Sociales
+    del Gobierno de Canarias
+  link_id: 1o0YME2R987UAdzOXvcilHak-G0juAQew
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Información Institucional
+'34':
+  description: Memoria anual 2022
+  link_id: 18lwmPYUaU3drIjayMuZKH6lXQgQRvPKJ
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Información Institucional
+'35':
+  description: Memoria anual 2023
+  link_id: 1aRlP9EfU9s-tT29lT7aGWMAG6sN7PRuK
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Información Institucional
+'36':
+  description: Información Salarial de empleados
+  link_id: 1Vi7Zo4c5URQ9Yg9K8sfOIog9sbPQXJUn
+  link_text: Descarga en formato ods
+  number: voluntaria
+  type: Información Organizativa
+'37':
+  description: Balance 2021
+  link_id: 1a0goX6naZnVpzNiooTNWCHrCHDTSTS5c
+  link_text: Descarga en formato ods
+  number: voluntaria
+  type: Información económica y financiera
+'38':
+  description: P&G 2021
+  link_id: 1_qp8PEnJyM-CSdO4JAuB_xMP2ITfKtN6
+  link_text: Descarga en formato ods
+  number: voluntaria
+  type: Información económica y financiera
+'404':
+  description: No disponible
+  link_id: null
+  link_text: No disponible
+  number: sistema
+  type: No disponible
+2024_menores:
+  description: Habilitación como Entidad Colaboradora de Atención Integral a Menores
+  link_id: 1volG3VDAM4AQBFql4giYTOJajJ2EYIhs
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Habilitación como Entidad Colaboradora de Atención Integral a Menores
+2024_voluntariado:
+  description: Acreditación de entidad de Voluntariado
+  link_id: 1Y0r20zmaOvvXGIWPwWmI0cZx3b1rMPI0
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Acreditación de entidad de Voluntariado
+'2024_balance':
+  description: Balance 2024
+  link_id: 1PRcd2oQh4UDJAyOYousNOQ1a4xzoergj
+  link_text: Descarga en formato ods
+  number: '7'
+  type: Información económica y financiera
+'2024_p_g':
+  description: P&G 2024
+  link_id: 1b_F1Ms6sHHcquy-iFnCk3EY6AfG9Wet6
+  link_text: Descarga en formato ods
+  number: '7'
+  type: Información económica y financiera
+'2024_memoria_economica':
+  description: Memoria económica de 2024
+  link_id: 1gae0UqFLUOhuGqXwAt4bgau5pfQEjdw7
+  link_text: Descarga en formato odt
+  number: '7'
+  type: Información económica y financiera
+'2024_declaracion_accesibilidad':
+  description: Declaración de Accesibilidad
+  link_id: 12YE7bfYMf2oh6nKvGljNV4MpX2qGWNoh
+  link_text: Descarga en formato txt
+  number: 'voluntaria'
+  type: Información Organizativa

@@ -1,0 +1,61 @@
+---
+title: Resultados Económicos
+description: Consulta los resultados económicos, balances y memorias anuales de la Asociación Solidaria Infinity, presentados con transparencia y rigor conforme a la normativa contable vigente.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import DocLink from '../../../components/DocLink.astro';
+
+<Aside type="note" title="Transparencia económica y rendición de cuentas">
+La **Asociación Solidaria Infinity** presenta anualmente sus **balances, cuentas de pérdidas y ganancias** y **memorias económicas**, en cumplimiento de sus obligaciones contables y de transparencia.  
+</Aside>
+
+<div class="no-header-table">
+<Tabs syncKey="contratos">
+  <TabItem label="2024">
+    |  |  |
+    |----------------------------------|----------------|
+    | **Resultado del Ejercicio**      | **-5.875,29 €** |
+    | **Pérdidas y Ganancias**         | <DocLink ref="2024_p_g" /> |
+    | **Balance**                      | <DocLink ref="2024_balance" /> |
+    | **Memoria Económica**            | <DocLink ref="2024_memoria_economica" /> |
+    | **Auditoría de Cuentas**         | *No obligados |
+  </TabItem>
+  <TabItem label="2023">
+    |  |  |
+    |----------------------------------|----------------|
+    | **Resultado del Ejercicio**      | **-21.781,31 €** |
+    | **Pérdidas y Ganancias**         | <DocLink ref="18" /> |
+    | **Balance**                      | <DocLink ref="17" /> |
+    | **Memoria Económica**            | <DocLink ref="19" /> |
+    | **Auditoría de Cuentas**         | *No obligados |
+  </TabItem>
+  <TabItem label="2022">
+    |  |  |
+    |----------------------------------|----------------|
+    | **Resultado del Ejercicio**      | **2.686,67 €** |
+    | **Pérdidas y Ganancias**         | <DocLink ref="14" /> |
+    | **Balance**                      | <DocLink ref="13" /> |
+    | **Memoria Económica**            | <DocLink ref="15" /> |
+    | **Auditoría de Cuentas**         | *No obligados |
+  </TabItem>
+  <TabItem label="2021">
+    |  |  |
+    |----------------------------------|----------------|
+    | **Resultado del Ejercicio**      | **6.601,27 €** |
+    | **Pérdidas y Ganancias**         | <DocLink ref="38" /> |
+    | **Balance**                      | <DocLink ref="37" /> |
+    | **Memoria Económica**            | <DocLink ref="15" /> |
+    | **Auditoría de Cuentas**         | *No obligados |
+  </TabItem>
+</Tabs>
+</div>
+
+<Aside type="caution" title="Notas legales y auditoría">
+La Asociación Solidaria Infinity **no está obligada a someter sus cuentas a auditoría externa**, de acuerdo con el **Plan General Contable para PYMES y Entidades sin Ánimo de Lucro**, ya que no supera los límites que exigirían dicha obligación ni posee la calificación de utilidad pública.
+</Aside>
+
