@@ -2,21 +2,70 @@
 title: Portal de Transparencia
 description: Bienvenido a nuestro Portal de Transparencia.
 template: doc
-hero:
-  tagline: Estamos comprometidos con la máxima rendición de cuentas y la apertura total en nuestra gestión, inspirados en los principios de buen gobierno y acceso a la información pública.
-  image:
-    file: ../../assets/images/transparencia.jpg
-    alt: Portal de Transparencia de Asociación Solidaria Infinity
 ---
 
-import { LinkCard } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
+import { Icon } from '@astrojs/starlight/components';
 import { documentsInfo } from '../../data/documents.ts';
+import ImageCard from '../../components/ImageCard.astro';
+import institucionalImage from '../../assets/images/sections/institucional.svg';
+import adminImage from '../../assets/images/sections/administradores-directivos.svg';
+import organizativaImage from '../../assets/images/sections/organizativa.svg';
+import economicaImage from '../../assets/images/sections/economica-financiera.svg';
+import contratosImage from '../../assets/images/sections/contratos-y-convenios.svg';
+import ayudasImage from '../../assets/images/sections/ayudas-subvenciones.svg';
+
+![Logotipo de Infinity Transparencia](../../assets/logo-light.svg)
 
 <Aside title='Última actualización'>
 <strong><em>{documentsInfo.last_update}</em></strong>
 </Aside>
 
+
+<div class="card-grid">
+  <ImageCard
+    title="Información Institucional"
+    description="Descubre detalles sobre nuestra estructura y misión."
+    href="/informacion-institucional/quienes-somos/"
+    imageSrc={institucionalImage}
+    imageAlt="Icono de información institucional"
+  />
+  <ImageCard
+    title="Información Organizativa"
+    description="Explora cómo estamos organizados y nuestros procesos."
+    href="/informacion-sobre-administradores-y-directivos/administradores-y-cargos-directivos"
+    imageSrc={organizativaImage}
+    imageAlt="Icono de información organizativa"
+  />
+  <ImageCard
+    title="Administradores y Directivos"
+    description="Conoce a nuestro equipo directivo y sus responsabilidades."
+    href="/informacion-sobre-administradores-y-directivos/administradores-y-cargos-directivos"
+    imageSrc={adminImage}
+    imageAlt="Icono de administradores y directivos"
+  />
+  <ImageCard
+    title="Información Económica y Financiera"
+    description="Revisa nuestros datos financieros y balances."
+    href="/informacion-economica-y-financiera/resultados-economicos"
+    imageSrc={economicaImage}
+    imageAlt="Icono de información económica y financiera"
+  />
+  <ImageCard
+    title="Contratos y convenios"
+    description="Consulta los contratos y convenios suscritos por nuestra organización."
+    href="/informacion-de-contratos-y-convenios/informacion-de-contratos"
+    imageSrc={contratosImage}
+    imageAlt="Icono de contratos y convenios"
+  />
+  <ImageCard
+    title="Subvenciones y Ayudas"
+    description="Consulta las subvenciones y ayudas recibidas."
+    href="/informacion-de-ayudas-y-subvenciones/ayudas-y-subvenciones"
+    imageSrc={ayudasImage}
+    imageAlt="Icono de subvenciones y ayudas"
+  />
+</div>
 
 ## Principios Rectores
 
@@ -30,23 +79,15 @@ Estos principios incluyen:
 - **Objetividad**: la información debe ser neutral e imparcial.
 
 <Aside type="tip" title="Compromiso Open Source">
-Utilizamos formatos abiertos para los archivos con datos que exponemos siempre que es posible. También publicamos el código fuente de nuestro portal de transparencia en Git Hub.
+Utilizamos formatos abiertos para los archivos con datos que exponemos siempre que es posible. También publicamos el código fuente de nuestro portal de transparencia en GitHub.
 </Aside>
 
 ## Evaluación Externa
 
-Para garantizar la transparencia y la rendición de cuentas, nos sometemos periódicamente  a la evaluación externa del  <a href="https://transparenciacanarias.org/" target="_blank" alt="Acceso a la web del Comisionado de Transparencia de Canarias">Comisionado de Transparencia de Canarias.</a> En este proceso, se revisa nuestro cumplimiento de la Ley de Transparencia y se realizan recomendaciones para mejorar nuestras prácticas.
+Para garantizar la transparencia y la rendición de cuentas, nos sometemos periódicamente a la evaluación externa del <a href="https://transparenciacanarias.org/" target="_blank" alt="Acceso a la web del Comisionado de Transparencia de Canarias">Comisionado de Transparencia de Canarias.</a> En este proceso, se revisa nuestro cumplimiento de la Ley de Transparencia y se realizan recomendaciones para mejorar nuestras prácticas.
 <a href="https://transparenciacanarias.org/" target="_blank" alt="Acceso a la web del Comisionado de Transparencia de Canarias">![Logotipo del Comisionado de Transparencia de Canarias](../../assets/images/comisionado-de-transparencia.png)</a>
 
 Creemos que la transparencia es esencial para fortalecer la confianza de nuestros socios, colaboradores y la sociedad en general, por tanto nos comprometemos a:
 - Someternos a controles y auditorías externas que verifiquen el cumplimiento de nuestros estándares.
 - Publicar toda la información relativa a nuestras memorias anuales, balance de cuentas, actividades, y cualquier otra información relevante de manera abierta y reutilizable.
 - Facilitar el acceso a la información a través de nuestro portal web y otros canales de comunicación.
-
-
-<LinkCard
-  title="Información Institucional"
-  href="/informacion-institucional/quienes-somos/"
-  description="Conoce nuestra organización."
-/>
-
