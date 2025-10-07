@@ -1,49 +1,60 @@
-# Starlight Starter Kit: Basics
+# 🌐 Portal de Transparencia  
+**Asociación Solidaria Infinity**
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Este repositorio contiene el **código fuente abierto del Portal de Transparencia** de la [Asociación Solidaria Infinity](https://transparencia.asinfinity.org), una entidad sin ánimo de lucro comprometida con la inclusión, la ética y el buen gobierno.
 
+El portal facilita el acceso público a la información institucional, organizativa, económica y de gestión de la Asociación, en cumplimiento de la [Ley 19/2013, de Transparencia, Acceso a la Información Pública y Buen Gobierno](https://www.boe.es/buscar/doc.php?id=BOE-A-2013-12887) y la [Ley Canaria 12/2014, de Transparencia y Acceso a la Información Pública](https://www.boe.es/eli/es-cn/l/2014/12/26/12).
+
+---
+
+## 🧩 Tecnologías utilizadas
+
+El portal está desarrollado utilizando un conjunto de tecnologías modernas, accesibles y sostenibles:
+
+- ⚡ **[Astro](https://astro.build/)** — Framework de desarrollo estático, rápido y ligero.  
+- 📘 **[Starlight](https://starlight.astro.build/)** — Sistema de documentación basado en Astro, diseñado para sitios claros, accesibles y bien estructurados.  
+- 💠 **[Rapide Theme](https://github.com/HiDeoo/starlight-theme-rapide)** — Tema visual optimizado para Starlight, con componentes modernos y alta legibilidad.  
+- 🧱 **Markdown / MDX** — Lenguaje de contenido que permite mezclar texto y componentes interactivos.  
+- 🚀 **[GitHub Pages](https://pages.github.com/)** — Entorno de despliegue continuo y gratuito.  
+
+El portal sigue las **pautas de accesibilidad WCAG 2.1** y cumple el **Real Decreto 1112/2018** sobre accesibilidad web en el sector público.
+
+---
+
+## ⚙️ Entorno de desarrollo
+
+Antes de comenzar, asegúrate de tener instalado:
+
+- **Node.js** versión 20 o superior  
+- **pnpm** como gestor de paquetes
+
+Si deseas adaptar el portal a tu organización o colaborar en su mejora, realiza un **fork** de este repositorio y utiliza los siguientes comandos:
+
+```bash
+pnpm install     # Instala las dependencias
+pnpm dev         # Inicia el servidor de desarrollo
 ```
-pnpm create astro@latest -- --template starlight
-```
-.
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+Podrás acceder al sitio en: http://localhost:4321
+Para compilar la versión de producción:
+bashpnpm build
+El resultado se genera en la carpeta dist/, lista para desplegarse en GitHub Pages o cualquier otro hosting estático.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+💡 Reutilización y colaboración
+Este proyecto es de código abierto.
+Cualquier entidad sin ánimo de lucro, fundación u organización social puede reutilizar, adaptar o mejorar este portal como modelo para su propio sistema de transparencia.
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+🧩 Realiza un fork para adaptarlo a tu entidad.
+💬 Envía Pull Requests con mejoras o correcciones.
+📄 Consulta la estructura de contenidos en la carpeta /src/content/docs.
+📫 Contacta con el equipo técnico en coders@asinfinity.org.
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Tu participación contribuye a fortalecer la cultura de rendición de cuentas y gobierno abierto.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+🔗 Enlaces útiles
 
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+🌍 Portal en producción: https://transparencia.asinfinity.org
+⚡ Astro Framework: https://astro.build
+📘 Starlight: https://starlight.astro.build
+💠 Rapide Theme: https://github.com/HiDeoo/starlight-theme-rapide
+🔎 Accesibilidad WCAG 2.1 (W3C): https://www.w3.org/WAI/standards-guidelines/wcag
