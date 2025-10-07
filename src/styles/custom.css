@@ -46,3 +46,17 @@ starlight-tabs table td {
 starlight-tabs table td:nth-child(2) {
   text-align: right;
 }
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -149,7 +149,7 @@ export default defineConfig({
       },
     ],
     customCss: [
-      './public/styles/custom.css',
+      '/src/styles/custom.css',
     ],
   })],
 });
