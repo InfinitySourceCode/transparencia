@@ -60,3 +60,20 @@ starlight-tabs table td:nth-child(2) {
     grid-template-columns: 1fr;
   }
 }
+
+.logo-animation {
+  opacity: 0;
+  transform: translateY(-20px); /* Comienza 20px arriba */
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Estado inicial: 20px arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Desciende a la posición original */
+  }
+}
