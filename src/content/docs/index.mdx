@@ -1,9 +1,10 @@
 ---
 title: Portal de Transparencia
-description: Bienvenido a nuestro Portal de Transparencia.
+description: Bienvenido a nuestro Portal de Transparencia. Accede a información pública, transparencia institucional y datos abiertos sobre nuestra organización.
 template: doc
 ---
 
+import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
 import { Icon } from '@astrojs/starlight/components';
 import { documentsInfo } from '../../data/documents.ts';
@@ -14,53 +15,53 @@ import organizativaImage from '../../assets/images/sections/organizativa.svg';
 import economicaImage from '../../assets/images/sections/economica-financiera.svg';
 import contratosImage from '../../assets/images/sections/contratos-y-convenios.svg';
 import ayudasImage from '../../assets/images/sections/ayudas-subvenciones.svg';
+import logoImage from '../../assets/logo-light.svg';
 
-![Logotipo de Infinity Transparencia](../../assets/logo-light.svg)
+<Image src={logoImage} alt="Logotipo de Infinity Transparencia" class="logo-animation" />
 
 <Aside title='Última actualización'>
-<strong><em>{documentsInfo.last_update}</em></strong>
+  <strong><em>{documentsInfo.last_update}</em></strong>
 </Aside>
-
 
 <div class="card-grid">
   <ImageCard
     title="Información Institucional"
-    description="Descubre detalles sobre nuestra estructura y misión."
+    description="Detalles sobre nuestra estructura y misión."
     href="/informacion-institucional/quienes-somos/"
     imageSrc={institucionalImage}
     imageAlt="Icono de información institucional"
   />
   <ImageCard
     title="Información Organizativa"
-    description="Explora cómo estamos organizados y nuestros procesos."
+    description="Estructura y funcionamiento interno."
     href="/informacion-sobre-administradores-y-directivos/administradores-y-cargos-directivos"
     imageSrc={organizativaImage}
     imageAlt="Icono de información organizativa"
   />
   <ImageCard
     title="Administradores y Directivos"
-    description="Conoce a nuestro equipo directivo y sus responsabilidades."
+    description="Roles y perfiles del equipo directivo."
     href="/informacion-sobre-administradores-y-directivos/administradores-y-cargos-directivos"
     imageSrc={adminImage}
     imageAlt="Icono de administradores y directivos"
   />
   <ImageCard
     title="Información Económica y Financiera"
-    description="Revisa nuestros datos financieros y balances."
+    description="Datos y balances financieros."
     href="/informacion-economica-y-financiera/resultados-economicos"
     imageSrc={economicaImage}
     imageAlt="Icono de información económica y financiera"
   />
   <ImageCard
     title="Contratos y convenios"
-    description="Consulta los contratos y convenios suscritos por nuestra organización."
+    description="Listado de contratos y acuerdos."
     href="/informacion-de-contratos-y-convenios/informacion-de-contratos"
     imageSrc={contratosImage}
     imageAlt="Icono de contratos y convenios"
   />
   <ImageCard
     title="Subvenciones y Ayudas"
-    description="Consulta las subvenciones y ayudas recibidas."
+    description="Registro de subvenciones recibidas."
     href="/informacion-de-ayudas-y-subvenciones/ayudas-y-subvenciones"
     imageSrc={ayudasImage}
     imageAlt="Icono de subvenciones y ayudas"
@@ -79,7 +80,7 @@ Estos principios incluyen:
 - **Objetividad**: la información debe ser neutral e imparcial.
 
 <Aside type="tip" title="Compromiso Open Source">
-Utilizamos formatos abiertos para los archivos con datos que exponemos siempre que es posible. También publicamos el código fuente de nuestro portal de transparencia en GitHub.
+  Utilizamos formatos abiertos para los archivos con datos que exponemos siempre que es posible. También publicamos el código fuente de nuestro portal de transparencia en GitHub.
 </Aside>
 
 ## Evaluación Externa
