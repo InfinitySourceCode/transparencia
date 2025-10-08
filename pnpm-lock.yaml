@@ -15,11 +15,14 @@ importers:
         specifier: ^0.36.0
         version: 0.36.0(astro@5.14.1(@types/node@24.7.0)(rollup@4.52.4)(typescript@5.9.3))
       astro:
-        specifier: ^5.6.1
+        specifier: ^5.14.1
         version: 5.14.1(@types/node@24.7.0)(rollup@4.52.4)(typescript@5.9.3)
       js-yaml:
         specifier: ^4.1.0
         version: 4.1.0
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.6
       sharp:
         specifier: ^0.34.2
         version: 0.34.4
@@ -1472,8 +1475,8 @@ packages:
   sax@1.4.1:
     resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
 
-  semver@7.7.2:
-    resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
+  semver@7.7.3:
+    resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2347,7 +2350,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 24.7.0
+      '@types/node': 17.0.45
 
   '@types/unist@2.0.11': {}
 
@@ -2436,7 +2439,7 @@ snapshots:
       picomatch: 4.0.3
       prompts: 2.4.2
       rehype: 13.0.2
-      semver: 7.7.2
+      semver: 7.7.3
       shiki: 3.13.0
       smol-toml: 1.4.2
       tinyexec: 0.3.2
@@ -3802,13 +3805,13 @@ snapshots:
 
   sax@1.4.1: {}
 
-  semver@7.7.2: {}
+  semver@7.7.3: {}
 
   sharp@0.34.4:
     dependencies:
       '@img/colour': 1.0.0
       detect-libc: 2.1.2
-      semver: 7.7.2
+      semver: 7.7.3
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.4
       '@img/sharp-darwin-x64': 0.34.4
