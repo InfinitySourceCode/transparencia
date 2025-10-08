@@ -49,7 +49,7 @@ export default defineConfig({
           label: 'Administradores y directivos',
           items: [
             { label: 'Administradores y cargos directivos', link: '/informacion-sobre-administradores-y-directivos/administradores-y-cargos-directivos' },
-            { label: 'Retribuciones a cargos directivos', link: '/informacion-sobre-administradores-y-directivos/retribuciones' },
+            { label: 'Nombramientos y retribuciones', link: '/informacion-sobre-administradores-y-directivos/nombramientos-y-retribuciones' },
           ],
         },
         {
