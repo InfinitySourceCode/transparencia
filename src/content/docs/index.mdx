@@ -6,6 +6,7 @@ template: doc
 
 import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
 import { Icon } from '@astrojs/starlight/components';
 import { documentsInfo } from '../../data/documents.ts';
 import ImageCard from '../../components/ImageCard.astro';
@@ -21,7 +22,7 @@ import logoImage from '../../assets/logo-light.svg';
 
 <code>Última actualización {documentsInfo.last_update}</code>
 
-<div class="card-grid">
+<div class="three-card-grid">
   <ImageCard
     title="Información Institucional"
     description="Identidad y certificaciones."
