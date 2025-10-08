@@ -40,8 +40,8 @@ export default defineConfig({
         {
           label: 'Información organizativa',
           items: [
-            { label: 'Normativa aplicable a la entidad', link: '/informacion-organizativa/normativa-aplicable/' },
             { label: 'Organigrama y Estatutos', link: '/informacion-organizativa/organigrama-y-estatutos/' },
+            { label: 'Normativa aplicable a la entidad', link: '/informacion-organizativa/normativa-aplicable/' },
             { label: 'Funciones y competencias', link: '/informacion-organizativa/funciones-y-competencias/' },
           ],
         },
