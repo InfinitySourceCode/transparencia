@@ -11,7 +11,7 @@ Destaca por su diseño con temas claro y oscuro para accesibilidad, manejo de co
 
 ---
 
-## 🧩 Tecnologías utilizadas
+## 🧩 Tecnologías utilizadas 
 
 El portal está desarrollado utilizando un conjunto de tecnologías modernas, accesibles y sostenibles:
 
