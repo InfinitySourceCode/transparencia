@@ -1,6 +1,6 @@
 ---
 title: Portal de Transparencia
-description: Bienvenido a nuestro Portal de Transparencia. Accede a información pública, transparencia institucional y datos abiertos sobre nuestra organización.
+description: Bienvenido a nuestro Portal de Transparencia. Accede a información pública, datos abiertos y detalles sobre la transparencia institucional de nuestra organización..
 template: doc
 ---
 
@@ -19,9 +19,7 @@ import logoImage from '../../assets/logo-light.svg';
 
 <Image src={logoImage} alt="Logotipo de Infinity Transparencia" class="logo-animation" />
 
-<Aside title='Última actualización'>
-  <strong><em>{documentsInfo.last_update}</em></strong>
-</Aside>
+<code>Última actualización {documentsInfo.last_update}</code>
 
 <div class="card-grid">
   <ImageCard
@@ -54,7 +52,7 @@ import logoImage from '../../assets/logo-light.svg';
   />
   <ImageCard
     title="Contratos y convenios"
-    description="Listado de contratos y convenios públicos."
+    description="Datos de contratos y convenios públicos."
     href="/informacion-de-contratos-y-convenios/informacion-de-contratos"
     imageSrc={contratosImage}
     imageAlt="Icono de contratos y convenios"
@@ -85,10 +83,10 @@ Estos principios incluyen:
 
 ## Evaluación Externa
 
-Para garantizar la transparencia y la rendición de cuentas, nos sometemos periódicamente a la evaluación externa del <a href="https://transparenciacanarias.org/" target="_blank" alt="Acceso a la web del Comisionado de Transparencia de Canarias">Comisionado de Transparencia de Canarias.</a> En este proceso, se revisa nuestro cumplimiento de la Ley de Transparencia y se realizan recomendaciones para mejorar nuestras prácticas.
+Para garantizar la transparencia y la rendición de cuentas, nos sometemos periódicamente a la evaluación externa del <code><a href="https://transparenciacanarias.org/" target="_blank" alt="Acceso a la web del Comisionado de Transparencia de Canarias">Comisionado de Transparencia de Canarias.</a></code> En este proceso, se revisa nuestro cumplimiento de la Ley de Transparencia y se realizan recomendaciones para mejorar nuestras prácticas.
 <a href="https://transparenciacanarias.org/" target="_blank" alt="Acceso a la web del Comisionado de Transparencia de Canarias">![Logotipo del Comisionado de Transparencia de Canarias](../../assets/images/comisionado-de-transparencia.png)</a>
 
-Creemos que la transparencia es esencial para fortalecer la confianza de nuestros socios, colaboradores y la sociedad en general, por tanto nos comprometemos a:
+La transparencia es esencial para fortalecer la confianza de nuestros socios, colaboradores y de la sociedad en general; por ello, nos comprometemos a:
 - Someternos a controles y auditorías externas que verifiquen el cumplimiento de nuestros estándares.
 - Publicar toda la información relativa a nuestras memorias anuales, balance de cuentas, actividades, y cualquier otra información relevante de manera abierta y reutilizable.
 - Facilitar el acceso a la información a través de nuestro portal web y otros canales de comunicación.
