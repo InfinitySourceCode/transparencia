@@ -75,11 +75,7 @@ jobs:
       - name: Validar sitemaps
         run: |
           if [ ! -f ${{ env.BUILD_PATH }}/dist/sitemap-index.xml ]; then
-            echo "Error: sitemap-index.xml no encontrado en dist!"
-            exit 1
-          fi
-          if ! ls ${{ env.BUILD_PATH }}/dist/sitemap-*.xml >/dev/null 2>&1; then
-            echo "Error: No se encontraron archivos sitemap-*.xml en dist!"
+            echo "Error: sitemap-index.xml not found in dist!"
             exit 1
           fi
         working-directory: ${{ env.BUILD_PATH }}
