@@ -7,7 +7,7 @@ Este repositorio contiene el **código fuente abierto del [Portal de Transparenc
 
 Si eres desarrollador para una pequeña asociación o voluntario con experiencia en Node.js y JavaScript, no permitas que el desafío de crear un Portal de Transparencia, te detenga: **realiza un fork de este repositorio**. Este proyecto aprovecha Astro, un framework robusto, bien documentado y de alto rendimiento, que te ofrece un modelo adaptable y accesible para personalizar, junto con un hosting gratuito vía GitHub Pages. 
 
-Destaca por su diseño con temas claro y oscuro para accesibilidad, un buscador integrado, requerido frecuentemente por administraciones o entes de validación, y un despliegue automático con GitHub Actions en GitHub Pages, perfecto para agilizar tus builds.
+Destaca por su diseño con temas claro y oscuro para accesibilidad, manejo de consentimiento de cookies, un buscador integrado, requerido frecuentemente por administraciones o entes de validación, y un despliegue automático con GitHub Actions en GitHub Pages, perfecto para agilizar tus builds.
 
 ---
 

@@ -12,10 +12,12 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/starlight": "^0.36.0",
+    "@jop-software/astro-cookieconsent": "^3.0.1",
     "astro": "^5.14.1",
     "js-yaml": "^4.1.0",
     "postcss": "^8.4.47",
     "sharp": "^0.34.2",
-    "starlight-theme-rapide": "^0.5.1"
+    "starlight-theme-rapide": "^0.5.1",
+    "vanilla-cookieconsent": "^3.1.0"
   }
 }
