@@ -1,0 +1,94 @@
+---
+/* src/components/CookieConsent.astro */
+const googleAnalyticsId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID || 'G-7FBCL4YV9X';
+---
+
+<!-- Carga el JS de vanilla-cookieconsent -->
+<script src="/node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js" type="text/javascript"></script>
+
+<!-- Script de inicialización -->
+<script is:inline>
+  function initCookieConsent() {
+    if (typeof CookieConsent !== 'undefined' && !document.getElementById('cc--main')) {
+      CookieConsent.run({
+        root: 'body', // Cambiado a 'body' para evitar limitaciones del contenedor
+        autoShow: true,
+        mode: 'opt-in',
+        disablePageInteraction: false,
+        hideFromBots: true,
+        onFirstConsent: ({ cookie }) => {
+          console.log('Primer consentimiento guardado:', cookie);
+        },
+        onChange: ({ cookie, changedCategories }) => {
+          console.log('Preferencias cambiadas:', changedCategories);
+          if (changedCategories.includes('analytics')) {
+            if (CookieConsent.acceptedCategory('analytics')) {
+              gtag('consent', 'update', { 'analytics_storage': 'granted' });
+            } else {
+              gtag('consent', 'update', { 'analytics_storage': 'denied' });
+            }
+          }
+        },
+        guiOptions: {
+          consentModal: {
+            layout: 'cloud',
+            position: 'bottom center',
+            flipButtons: false,
+            equalWeightButtons: true,
+          },
+          preferencesModal: {
+            layout: 'box',
+            position: 'right',
+            equalWeightButtons: true,
+            flipButtons: false,
+          },
+        },
+        categories: {
+          necessary: {
+            enabled: true,
+            readOnly: true,
+          },
+          analytics: {
+            enabled: true,
+          },
+        },
+        language: {
+          default: 'es',
+          translations: {
+            es: {
+              consentModal: {
+                title: 'Consentimiento de cookies',
+                description: 'Este sitio utiliza cookies para mejorar tu experiencia. Puedes aceptar todas las cookies o personalizar tu configuración. <a href="https://www.asinfinity.org/home/legal/pol%C3%ADtica-de-cookies" target="_blank" rel="noopener noreferrer">Más información</a>',
+                acceptAllBtn: 'Aceptar todas',
+                acceptNecessaryBtn: 'Rechazar no esenciales',
+                showPreferencesBtn: 'Personalizar',
+              },
+              preferencesModal: {
+                title: 'Configuración de cookies',
+                savePreferencesBtn: 'Guardar configuración',
+                acceptAllBtn: 'Aceptar todas',
+                acceptNecessaryBtn: 'Rechazar no esenciales',
+                closeIconLabel: 'Cerrar',
+                sections: [
+                  {
+                    title: 'Cookies esenciales',
+                    description: 'Estas cookies son necesarias para el funcionamiento básico del sitio web y no se pueden desactivar.',
+                    linkedCategory: 'necessary',
+                  },
+                  {
+                    title: 'Cookies de análisis',
+                    description: 'Estas cookies nos permiten analizar el uso del sitio para mejorar su rendimiento. Usamos Google Analytics para entender cómo los usuarios navegan en el sitio.',
+                    linkedCategory: 'analytics',
+                  },
+                ],
+              },
+            },
+          },
+        },
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initCookieConsent);
+  document.addEventListener('astro:page-load', initCookieConsent);
+</script>

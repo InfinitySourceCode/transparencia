@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeRapide from 'starlight-theme-rapide';
-import sitemap from '@astrojs/sitemap'; // Importa la integración sitemap
+import sitemap from '@astrojs/sitemap';
 
 const googleAnalyticsId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID || 'G-7FBCL4YV9X';
 
@@ -83,16 +83,20 @@ export default defineConfig({
         },
       ],
       head: [
-        // Google Analytics cargando siempre
+        // Google Analytics con categoría para bloqueo
         {
           tag: 'script',
           attrs: {
             src: `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`,
             async: true,
+            'data-cookiecategory': 'analytics',
           },
         },
         {
           tag: 'script',
+          attrs: {
+            'data-cookiecategory': 'analytics',
+          },
           content: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -102,7 +106,10 @@ export default defineConfig({
         },
       ],
       customCss: ['/src/styles/custom.css'],
+      components: {
+        Footer: './src/components/CookieConsent.astro', // Wrapper para incluir CookieConsent
+      },
     }),
-    sitemap(), // Añade la integración sitemap
+    sitemap(),
   ],
 });
