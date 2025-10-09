@@ -1,55 +1,52 @@
-@import 'vanilla-cookieconsent/dist/cookieconsent.css';
+/* ==============================
+   Tablas económicas y de contratos
+============================== */
 
+/* Tabla económica */
 .economic-table table {
-    margin-top: 2rem!important;
+  margin-top: 2rem !important;
 }
-
-
 .economic-table td:nth-child(2) {
-    text-align: right; /* Alinea la segunda columna (Resultado del Ejercicio) a la derecha */
+  text-align: right; /* Segunda columna alineada a la derecha */
 }
 
-
+/* Tabla de contratos */
 .contract-table tr[data-num-contratos="0"] {
-    background-color: #d3d3d3; /* Fondo gris claro */
-  }
-  
-  .contract-table td:nth-child(2) {
-    text-align: right; /* Alinea el contenido de la segunda columna a la derecha */
-  }
-  
-  .contract-table th {
-    text-align: center; /* Centra los encabezados */
-  }
-  
-  .contract-table td {
-    padding: 8px; /* Añade padding para mejor legibilidad */
-  }
+  background-color: #d3d3d3; /* Fondo gris claro para 0 contratos */
+}
+.contract-table td:nth-child(2) {
+  text-align: right; /* Segunda columna alineada a la derecha */
+}
+.contract-table th {
+  text-align: center; /* Encabezados centrados */
+}
+.contract-table td {
+  padding: 8px; /* Padding para mejor legibilidad */
+}
 
-/* Fondo gris para tablas con 0 contratos (aplicado manualmente a pestañas conocidas) */
-div.no-header-table starlight-tabs  table  th {
-    display: none;
-  }
+/* Tablas dentro de Starlight Tabs */
+div.no-header-table starlight-tabs table th {
+  display: none; /* Oculta encabezados en tablas específicas */
+}
 
-/* Estilos para las tablas dentro de los Tabs de Starlight */
 starlight-tabs table {
-  width: 100%; /* Ocupa el 100% del espacio disponible */
+  width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
   display: inline-table;
 }
 
 starlight-tabs table td {
-  padding: 0.75rem; /* Aumenta el padding para mejor espaciado */
+  padding: 0.75rem; /* Espaciado interno */
 }
 
-
-/* Alinear el texto de la segunda columna a la derecha */
 starlight-tabs table td:nth-child(2) {
-  text-align: right;
+  text-align: right; /* Segunda columna alineada a la derecha */
 }
 
-
+/* ==============================
+ Grids y layout
+============================== */
 .three-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -57,47 +54,44 @@ starlight-tabs table td:nth-child(2) {
   margin: 2rem 0;
 }
 
-/* 2 columnas entre 481px y 768px */
-@media (max-width: 768px) and (min-width: 481px) {
+@media (max-width: 768px) {
   .three-card-grid {
-    grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr; /* Un solo columna en móviles */
   }
 }
 
-/* 1 columna hasta 480px */
-@media (max-width: 480px) {
-  .three-card-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* ==============================
+ Animaciones
+============================== */
 
+/* Animación de logo */
 .logo-animation {
   opacity: 0;
-  transform: translateY(-20px); /* Comienza 20px arriba */
+  transform: translateY(-20px);
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
 @keyframes fadeInUp {
   0% {
-    opacity: 0;
-    transform: translateY(-20px); /* Estado inicial: 20px arriba */
+      opacity: 0;
+      transform: translateY(-20px);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0); /* Desciende a la posición original */
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
+/* Animación de escritura tipo ordenador retro */
 .last-update {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   border: 0px solid currentColor;
-  visibility: hidden; /* oculto hasta que empiece la animación */
+  visibility: hidden; /* Oculto hasta que empiece la animación */
   animation: typing 0.3s steps(30, end) 0.2s forwards;
 }
 
-/* Animación de escritura computerizada */
 @keyframes typing {
   0% { width: 0ch; visibility: visible; }
   100% { width: 40ch; visibility: visible; }
