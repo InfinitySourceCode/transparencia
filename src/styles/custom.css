@@ -49,17 +49,32 @@ starlight-tabs table td:nth-child(2) {
 ============================== */
 .three-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 2fr);
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
-@media (max-width: 768px) {
+/* ==============================
+   Grids y layout
+============================== */
+.three-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
   .three-card-grid {
-      grid-template-columns: 1fr; /* Un solo columna en móviles */
+    grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en tablets */
   }
 }
 
+@media (max-width: 768px) {
+  .three-card-grid {
+    grid-template-columns: 1fr; /* 1 tarjeta por fila en móviles */
+  }
+}
 /* ==============================
  Animaciones
 ============================== */
