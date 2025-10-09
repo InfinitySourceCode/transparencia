@@ -87,7 +87,7 @@ starlight-tabs table td:nth-child(2) {
   animation: typing 0.3s steps(30, end) 0.2s forwards;
 }
 
-/* Animación de escritura */
+/* Animación de escritura computerizada */
 @keyframes typing {
   0% { width: 0ch; visibility: visible; }
   100% { width: 40ch; visibility: visible; }
