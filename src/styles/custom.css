@@ -77,3 +77,19 @@ starlight-tabs table td:nth-child(2) {
     transform: translateY(0); /* Desciende a la posición original */
   }
 }
+
+.last-update {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 0px solid currentColor;
+  visibility: hidden; /* oculto hasta que empiece la animación */
+  animation: typing 0.3s steps(30, end) 0.2s forwards;
+}
+
+/* Animación de escritura computerizada */
+@keyframes typing {
+  0% { width: 0ch; visibility: visible; }
+  100% { width: 40ch; visibility: visible; }
+}
+
