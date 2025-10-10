@@ -284,3 +284,9 @@
   link_text: No Aplica por cuantía económica.
   number: '8'
   type: Información de Ayudas y subvenciones
+'2024_resumen_subveniones':
+  description: Resumen de Subvenciones 2024
+  link_id: 17DhRGHAajznmcUe6DcKioKNhQUBt5uW2
+  link_text: Descarga en formato ods
+  number: '16'
+  type: Información de Ayudas y subvenciones
