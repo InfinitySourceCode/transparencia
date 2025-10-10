@@ -278,3 +278,9 @@
   link_text: Descarga en formato pdf
   number: '8'
   type: Información de Ayudas y subvenciones
+'aditoria_no_aplica_cuantia':
+  description: No aplica por cuantía económica.
+  link_id: null
+  link_text: No Aplica por cuantía económica.
+  number: '8'
+  type: Información de Ayudas y subvenciones
