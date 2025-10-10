@@ -1,0 +1,46 @@
+---
+const ariaLabel = 'Ir a la página principal';
+const logo = {
+  light: '/src/assets/logo-light.svg',
+  dark: '/src/assets/logo-dark.svg',
+  alt: 'Logotipo Infinity Transparencia',
+  replacesTitle: true,
+};
+const title = 'Transparencia y Buen Gobierno';
+---
+
+<a href="/" aria-label={ariaLabel} class="sl-flex">
+  {logo ? (
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset={logo.dark} />
+      <img
+        src={logo.light}
+        alt={logo.alt}
+        class="logo"
+      />
+    </picture>
+  ) : (
+    <span>{title}</span>
+  )}
+</a>
+
+<style>
+    .sl-flex {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--sl-color-text);
+    }
+    .sl-flex img.logo {
+      height: 2.75rem !important; /* Forzar tamaño consistente */
+      width: auto;
+      max-height: none !important;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    @media (max-width: 768px) {
+      .sl-flex img.logo {
+        height: 2rem !important;
+      }
+    }
+  </style>

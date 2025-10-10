@@ -11,10 +11,12 @@ export default defineConfig({
   integrations: [
     starlight({
       plugins: [starlightThemeRapide()],
-      title: '',
+      title: 'Transparencia y Buen Gobierno',
       logo: {
+        replacesTitle: true,
         light: './src/assets/logo-light.svg',
         dark: './src/assets/logo-dark.svg',
+        alt: 'Logotipo Infinity Transparencia'
       },
       defaultLocale: 'root',
       locales: {
@@ -107,7 +109,7 @@ export default defineConfig({
       ],
       customCss: ['/src/styles/custom.css'],
       components: {
-        Sidebar: './src/components/CookieConsent.astro', // Wrapper para incluir CookieConsent
+        SiteTitle: './src/components/SiteTitle.astro', // Sobrescribe solo SiteTitle
       },
     }),
     sitemap(),
