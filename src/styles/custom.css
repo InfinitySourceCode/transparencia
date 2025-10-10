@@ -77,12 +77,6 @@ starlight-tabs table td:nth-child(2) {
 }
 
 
-@keyframes typing {
-  0% { width: 0ch; visibility: visible; }
-  100% { width: 40ch; visibility: visible; }
-
-}
-
 .contact-list {
   list-style: none;
 }
