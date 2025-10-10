@@ -3,81 +3,153 @@ import { Image } from 'astro:assets';
 const { title, description, href, imageSrc, imageAlt } = Astro.props;
 ---
 
-<a href={href} class="image-card">
-  <div class="image-card-image">
-    <Image src={imageSrc} alt={imageAlt} width="100" height="100" />
-  </div>
-  <h3>{title}</h3>
-  <p>{description}</p>
-</a>
+<div class="landing-cards">
+  <a href={href} class="image-card">
+    <div class="image-card-image">
+      <Image src={imageSrc} alt={imageAlt} width="100" height="100" />
+    </div>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </a>
+</div>
 
 <style>
-  .image-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: var(--sl-color-gray-0); /* Fondo más claro en tema claro */
-    transition: transform 0.2s;
+  /* 
+   * Contenedor principal para las tarjetas del componente.
+   * Define un contenedor sin márgenes ni padding para un diseño limpio.
+   */
+  :where(.landing-cards) {
+    margin: 0; /* Elimina márgenes externos */
+    padding: 0; /* Elimina padding externo */
+  }
+
+  /* 
+   * Estiliza la tarjeta como un enlace interactivo.
+   * Usa flexbox para alinear el contenido verticalmente y centra el texto.
+   * Aplica una animación de entrada exclusiva para las tarjetas de este componente.
+   */
+  :where(.landing-cards .image-card) {
+    display: flex; /* Usa flexbox para alinear contenido */
+    flex-direction: column; /* Organiza elementos en columna */
+    align-items: center; /* Centra elementos horizontalmente */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Elimina subrayado del enlace */
+    color: inherit; /* Hereda el color del contexto */
+    padding: 1.5rem; /* Espacio interno */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: var(--sl-color-gray-0); /* Fondo claro */
+    transition: transform 0.2s; /* Transición suave para hover */
     border: 1px solid var(--sl-color-gray-4); /* Borde claro */
-    animation: fadeInUp 0.5s ease-out forwards;
-    opacity: 0;
+    animation: imageCardFadeInUp 0.5s ease-out forwards; /* Animación de entrada */
+    opacity: 0; /* Inicialmente invisible para la animación */
   }
-  .image-card:hover {
-    transform: translateY(-5px);
-    background-color: var(--sl-color-blue-2); /* Hover en modo claro */
+
+  /* 
+   * Efecto hover para la tarjeta en modo claro.
+   * Eleva la tarjeta y cambia el fondo.
+   */
+  :where(.landing-cards .image-card):hover {
+    transform: translateY(-5px); /* Eleva la tarjeta 5px */
+    background-color: var(--sl-color-blue-2); /* Fondo azul claro en hover */
   }
-  .theme-dark .image-card {
+
+  /* 
+   * Estilos para la tarjeta en modo oscuro.
+   * Ajusta el fondo y el borde para el tema oscuro.
+   */
+  :where(.landing-cards .theme-dark .image-card) {
     background-color: var(--sl-color-gray-9); /* Fondo oscuro */
     border-color: var(--sl-color-gray-7); /* Borde oscuro */
   }
-  .theme-dark .image-card:hover {
-    background-color: var(--sl-color-blue-7); /* Hover en modo oscuro */
+
+  /* 
+   * Efecto hover para la tarjeta en modo oscuro.
+   * Cambia el fondo al pasar el ratón.
+   */
+  :where(.landing-cards .theme-dark .image-card):hover {
+    background-color: var(--sl-color-blue-7); /* Fondo azul oscuro en hover */
   }
-  .image-card-image {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+
+  /* 
+   * Contenedor de la imagen dentro de la tarjeta.
+   * Define un tamaño fijo y maneja el desbordamiento.
+   */
+  :where(.landing-cards .image-card-image) {
+    width: 100px; /* Ancho fijo de 100px */
+    height: 100px; /* Alto fijo de 100px */
+    margin-bottom: 1rem; /* Espacio debajo de la imagen */
+    overflow: hidden; /* Oculta el contenido que desborda */
+    transition: transform 0.3s ease; /* Transición suave para la imagen */
   }
-  .image-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+
+  /* 
+   * Estiliza la imagen dentro del contenedor.
+   * Asegura que la imagen cubra el contenedor y tenga bordes redondeados.
+   */
+  :where(.landing-cards .image-card-image img) {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    object-fit: cover; /* Cubre el contenedor sin distorsión */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
   }
-  .image-card:hover .image-card-image img {
+
+  /* 
+   * Efecto de zoom en la imagen al hacer hover sobre la tarjeta.
+   * Escala la imagen al 110% de su tamaño original.
+   */
+  :where(.landing-cards .image-card:hover .image-card-image img) {
     transform: scale(1.1); /* Escala al 110% */
   }
-  h3 {
-    margin: 0.5rem 0;
-    font-size: 1.25rem;
-    color: var(--sl-color-green-7); /* Texto principal */
+
+  /* 
+   * Estiliza el título de la tarjeta.
+   * Define el tamaño de fuente y el color principal.
+   */
+  :where(.landing-cards h3) {
+    margin: 0.5rem 0; /* Espacio vertical */
+    font-size: 1.25rem; /* Tamaño de fuente */
+    color: var(--sl-color-green-7); /* Color verde principal */
   }
-  p {
-    margin: 0;
-    color: var(--sl-color-gray-8); /* Texto secundario más oscuro en tema claro */
+
+  /* 
+   * Estiliza el texto descriptivo de la tarjeta.
+   * Usa un color secundario para el texto.
+   */
+  :where(.landing-cards p) {
+    margin: 0; /* Elimina márgenes */
+    color: var(--sl-color-gray-8); /* Color gris oscuro en tema claro */
   }
-  .theme-dark h3 {
-    color: var(--sl-color-green-4); /* Texto principal en modo oscuro */
+
+  /* 
+   * Ajusta el color del título en modo oscuro.
+   * Usa un verde más claro para mejor visibilidad.
+   */
+  :where(.landing-cards .theme-dark h3) {
+    color: var(--sl-color-green-4); /* Verde claro en modo oscuro */
   }
-  .theme-dark p {
-    color: var(--sl-color-gray-1); /* Texto secundario más claro en modo oscuro */
+
+  /* 
+   * Ajusta el color del texto descriptivo en modo oscuro.
+   * Usa un gris claro para mejor legibilidad.
+   */
+  :where(.landing-cards .theme-dark p) {
+    color: var(--sl-color-gray-1); /* Gris claro en modo oscuro */
   }
-  @keyframes fadeInUp {
+
+  /* 
+   * Define la animación de entrada para las tarjetas.
+   * Desplaza las tarjetas desde abajo hacia arriba con un efecto de desvanecimiento.
+   * Exclusiva para este componente para evitar conflictos con elementos externos.
+   */
+  @keyframes imageCardFadeInUp {
     0% {
-      opacity: 0;
-      transform: translateY(20px);
+      opacity: 0; /* Inicialmente invisible */
+      transform: translateY(20px); /* Comienza 20px abajo */
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 1; /* Totalmente visible */
+      transform: translateY(0); /* En su posición final */
     }
   }
 </style>

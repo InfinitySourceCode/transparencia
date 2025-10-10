@@ -48,19 +48,19 @@ if (!text) {
 ---
 
 {doc.link 
-  ? <a 
+  ? <code><a 
       href={doc.link} 
       target="_blank" 
       rel="noopener noreferrer" 
-      class={`no-underline ${className}`}
+      class={`doc-link ${className}`}
     >
       {displayText}
-    </a>
+    </a></code>
   : <span>{displayText}</span>
 }
 
 <style>
-  a.no-underline {
-    text-decoration: none;
+  a.doc-link {
+    
   }
 </style>
