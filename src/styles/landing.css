@@ -1,0 +1,71 @@
+/* src/styles/landing.css */
+
+/* 
+ * Contenedor principal del encabezado.
+ * Define un diseño de cuadrícula con dos columnas de igual ancho para el título y el logo.
+ * Alinea los elementos verticalmente en el centro para un diseño equilibrado en todas las pantallas.
+ */
+ .header-grid {
+    display: grid; /* Usa CSS Grid para un diseño de cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    gap: 0.5rem; /* Espacio de 0.5rem entre las celdas de la cuadrícula */
+    margin: 0 0; /* Elimina márgenes superior e inferior */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+  }
+  
+  /* 
+   * Oculta el título automático generado por Starlight (<h1 id="_top">).
+   * Esto evita que el título del frontmatter se muestre duplicado en la página.
+   */
+  h1#_top {
+    display: none; /* Oculta el elemento */
+  }
+  
+  /* 
+   * Estiliza el título <h2> dentro del contenedor .alt-title.
+   * Aplica un padding izquierdo y un peso de fuente ligero para un diseño limpio.
+   */
+  .alt-title h2 {
+    padding-left: 8px; /* Espacio a la izquierda para alinear visualmente */
+    font-weight: 200; /* Fuente ligera para un estilo minimalista */
+    margin: 0; /* Elimina márgenes predeterminados del <h2> */
+  }
+  
+  /* 
+   * Estiliza el logo dentro del contenedor .header-grid.
+   * Limita el ancho máximo del logo al 40% del espacio disponible en su celda.
+   * Evita cualquier animación no deseada.
+   */
+  .logo {
+    max-width: 40%; /* El logo no excede el 40% del ancho de su celda */
+    padding: 0; /* Elimina cualquier padding para un ajuste preciso */
+    animation: none !important; /* Forza la eliminación de cualquier animación */
+  }
+  
+  /* 
+   * Aplica una animación de escritura tipo ordenador retro al elemento <code class="last-update">.
+   * Simula la escritura de texto mostrando los caracteres progresivamente.
+   */
+  .last-update {
+    display: inline-block; /* Permite controlar el ancho durante la animación */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que excede el ancho animado */
+    border: 0px solid currentColor; /* Sin borde visible */
+    visibility: hidden; /* Oculta el elemento hasta que comienza la animación */
+    animation: typing 0.3s steps(30, end) 0.2s forwards; /* Aplica la animación de escritura */
+  }
+  
+  /* 
+   * Define la animación de escritura para .last-update.
+   * Controla la visibilidad y el ancho del texto para simular el efecto de escritura.
+   */
+  @keyframes typing {
+    0% {
+      width: 0ch; /* Comienza con ancho cero (sin texto visible) */
+      visibility: visible; /* Hace visible el elemento al iniciar la animación */
+    }
+    100% {
+      width: 40ch; /* Expande el ancho para mostrar todo el texto (ajustado al contenido) */
+      visibility: visible; /* Mantiene la visibilidad al final */
+    }
+  }

@@ -56,7 +56,7 @@ if (ref) {
         {cardDescription && <span class="description" set:html={cardDescription} />}
       </span>
       {className.includes('download-icon') ? null : (
-        <Icon name="download" size="1.333em" class="icon rtl:flip" />
+        <Icon name="cloud-download" size="2em" class="icon rtl:flip accent-color" />
       )}
     </div>
 ) : (
@@ -65,64 +65,106 @@ if (ref) {
 
 <style>
   @layer starlight.components {
+    /* 
+     * Contenedor principal de la tarjeta de enlace.
+     * Usa CSS Grid para alinear el contenido y el icono de descarga.
+     */
     .sl-link-card {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 0.5rem;
-      border: 1px solid var(--sl-color-gray-5);
-      border-radius: 0.5rem;
-      padding: 1rem;
-      box-shadow: var(--sl-shadow-sm);
-      position: relative;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+      display: grid; /* Diseño de cuadrícula */
+      grid-template-columns: 1fr auto; /* Contenido principal y icono */
+      gap: 0.5rem; /* Espacio entre columnas */
+      border: 1px solid var(--sl-color-gray-5); /* Borde gris claro */
+      border-radius: 0.5rem; /* Bordes redondeados */
+      padding: 1rem; /* Espacio interno */
+      box-shadow: var(--sl-shadow-sm); /* Sombra ligera */
+      position: relative; /* Para el a11y fix del enlace */
+      margin-top: 2rem; /* Espacio superior */
+      margin-bottom: 2rem; /* Espacio inferior */
     }
 
+    /* 
+     * Estiliza el enlace dentro de la tarjeta.
+     * Elimina el subrayado predeterminado para un diseño limpio.
+     */
     a {
-      text-decoration: none;
-      line-height: var(--sl-line-height-headings);
+      text-decoration: none; /* Sin subrayado en el enlace */
+      line-height: var(--sl-line-height-headings); /* Altura de línea consistente */
     }
 
-    /* a11y fix for https://github.com/withastro/starlight/issues/487 */
+    /* 
+     * Corrige problemas de accesibilidad (https://github.com/withastro/starlight/issues/487).
+     * Añade un área clicable que cubre toda la tarjeta.
+     */
     a::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+      content: ''; /* Elemento vacío */
+      position: absolute; /* Cubre toda la tarjeta */
+      inset: 0; /* Ocupa todo el espacio del contenedor */
     }
 
+    /* 
+     * Contenedor para el título y la descripción.
+     * Usa flexbox para apilarlos verticalmente.
+     */
     .stack {
-      flex-direction: column;
-      gap: 0.5rem;
+      flex-direction: column; /* Apila elementos verticalmente */
+      gap: 0.5rem; /* Espacio entre título y descripción */
     }
 
+    /* 
+     * Estiliza el título de la tarjeta.
+     * Usa una fuente más gruesa y un tamaño mayor.
+     */
     .title {
-      color: var(--sl-color-white);
-      font-weight: 600;
-      font-size: var(--sl-text-lg);
+      font-weight: 600; /* Peso de fuente seminegrita */
+      font-size: var(--sl-text-lg); /* Tamaño de fuente grande */
     }
 
+    /* 
+     * Estiliza el texto descriptivo de la tarjeta.
+     * Usa un color de acento, subrayado para simular un enlace, y espaciado de línea.
+     */
     .description {
-      color: var(--sl-color-gray-3);
-      line-height: 1.5;
+      line-height: 1.5; /* Espaciado de línea para legibilidad */
+      text-decoration: underline; /* Subrayado para simular un enlace */
+    }
+    
+    .accent-color {
+      color: var(--sl-color-text-accent) !important; /* Color de acento de Starlight */
     }
 
+    .sl-link-card:hover .description {
+      font-weight: 500!important;
+    }
+
+    /* 
+     * Estiliza el icono de descarga.
+     * Usa un color gris claro para visibilidad.
+     */
     .icon {
-      color: var(--sl-color-gray-3);
+      color: var(--sl-color-gray-3); /* Color gris claro */
     }
 
-    /* Hover state */
+    /* 
+     * Efecto hover para la tarjeta.
+     * Cambia el fondo y el color del borde.
+     */
     .sl-link-card:hover {
-      background: var(--sl-color-gray-7, var(--sl-color-gray-6));
-      border-color: var(--sl-color-gray-2);
+      background: var(--sl-color-gray-7, var(--sl-color-gray-6)); /* Fondo más oscuro */
+      border-color: var(--sl-color-gray-2); /* Borde más claro */
     }
 
+    /* 
+     * Cambia el color del icono al hacer hover.
+     */
     .sl-link-card:hover .icon {
-      color: var(--sl-color-white);
+      color: var(--sl-color-white); /* Icono blanco en hover */
     }
 
-    /* Hide default icon when download-icon class is used */
+    /* 
+     * Oculta el icono predeterminado cuando se usa la clase download-icon.
+     */
     .download-icon::before {
-      display: none;
+      display: none; /* Oculta el pseudo-elemento */
     }
   }
 </style>

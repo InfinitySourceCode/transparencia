@@ -1,9 +1,11 @@
 ---
-title: Portal de Transparencia
-description: Bienvenido a nuestro Portal de Transparencia. Accede a información pública, datos abiertos y detalles sobre la transparencia institucional de nuestra organización..
-template: doc
+title: Transparencia y Buen Gobierno 
+description: Portal de Transparencia de la Asociación Solidaria Infinity. Accede a información pública, datos económicos, institucionales y de gestión con compromiso ético y de buen gobierno.
+metaTitle: Portal de Transparencia | Asociación Solidaria Infinity
+head:
+  - tag: title
+    content: Portal de Transparencia | Asociación Solidaria Infinity
 ---
-
 import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
 import { CardGrid } from '@astrojs/starlight/components';
@@ -17,8 +19,15 @@ import economicaImage from '../../assets/images/sections/economica-financiera.sv
 import contratosImage from '../../assets/images/sections/contratos-y-convenios.svg';
 import ayudasImage from '../../assets/images/sections/ayudas-subvenciones.svg';
 import logoImage from '../../assets/logo-light.svg';
+import '../../styles/landing.css';
 
-<Image src={logoImage} alt="Logotipo de Infinity Transparencia" class="logo-animation" />
+<div class='header-grid'>
+  <div class='alt-title'>
+  ## Transparencia y Buen Gobierno
+  </div>
+  <Image src={logoImage} alt="Logotipo de Infinity Transparencia" />
+</div>
+---
 
 <div class="three-card-grid">
   <ImageCard
@@ -64,6 +73,8 @@ import logoImage from '../../assets/logo-light.svg';
     imageAlt="Icono de subvenciones y ayudas"
   />
 </div>
+
+---
 
 <code class="last-update">Última actualización {documentsInfo.last_update}</code>
 
