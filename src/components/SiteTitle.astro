@@ -1,15 +1,30 @@
 ---
-const ariaLabel = 'Ir a la página principal';
-const logo = {
-  light: '/src/assets/logo-light.svg',
-  dark: '/src/assets/logo-dark.svg',
-  alt: 'Logotipo Infinity Transparencia',
-  replacesTitle: true,
+import type { StarlightConfig } from '@astrojs/starlight/types';
+
+// Intentar obtener starlightConfig desde Astro.props
+const { starlightConfig } = Astro.props;
+
+// Configuración por defecto si starlightConfig es undefined
+const config = starlightConfig || {
+  title: 'Transparencia y Buen Gobierno',
+  logo: {
+    alt: 'Logotipo Infinity Transparencia',
+    replacesTitle: true,
+  },
 };
-const title = 'Transparencia y Buen Gobierno';
+
+const logo = {
+  light: '/logo-light.svg',
+  dark: '/logo-dark.svg',
+  alt: config.logo.alt,
+  replacesTitle: config.logo.replacesTitle,
+  aria: config.logo.alt, 
+};
+const title = config.title;
+const ariaLabel = 'Ir a la página principal';
 ---
 
-<a href="/" aria-label={ariaLabel} class="sl-flex">
+<a href="/" aria-label={ariaLabel} class="site-title sl-flex">
   {logo ? (
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset={logo.dark} />
@@ -25,22 +40,24 @@ const title = 'Transparencia y Buen Gobierno';
 </a>
 
 <style>
-    .sl-flex {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--sl-color-text);
-    }
+  .sl-flex {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--sl-color-text);
+  }
+  .sl-flex img.logo {
+    padding-top: 12px;
+    height: 3.55rem !important; /* Tamaño consistente */
+    width: auto;
+    max-height: none !important;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  @media (max-width: 768px) {
     .sl-flex img.logo {
-      height: 2.75rem !important; /* Forzar tamaño consistente */
-      width: auto;
-      max-height: none !important;
-      max-width: 100%;
-      object-fit: contain;
+      height: 3rem !important;
+      padding-top: 6px;
     }
-    @media (max-width: 768px) {
-      .sl-flex img.logo {
-        height: 2rem !important;
-      }
-    }
-  </style>
+  }
+</style>
