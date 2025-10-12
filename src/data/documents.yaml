@@ -290,3 +290,9 @@
   link_text: Descarga en formato ods
   number: '16'
   type: Información de Ayudas y subvenciones
+'2024_memoria_anual':
+  description: Memoria anual 2024
+  link_id: 1fzp37IAH2eh-L_HBbL0WJ2QRX-hky8uv
+  link_text: Descarga en formato pdf
+  number: voluntaria
+  type: Información Institucional
